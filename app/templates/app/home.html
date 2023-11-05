@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Home</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+<div>
+    {% for img in images %} 
+    <h1> {{img.name}} </h1>
+    <p> {{img.description}} </p>
+    <img src="{{img.image.url}}" width="100px" alt="">
+    {% endfor %}
+</div>
+{% endblock content %}
+
+
