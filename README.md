@@ -338,3 +338,8 @@ class RegisterForm(UserCreationForm):
 </form>
 {% endblock content%}
 ```
+![1](https://github.com/Krish123-lang/basic-django-template/assets/56486342/45f31561-1e8c-4e0d-ad5e-cca8a4f83789)
+![2](https://github.com/Krish123-lang/basic-django-template/assets/56486342/3e642bd0-1db6-4910-9e09-b48833c5f3cc)
+![3](https://github.com/Krish123-lang/basic-django-template/assets/56486342/4df36e07-075d-4fbb-851a-6a0c3f89b3a0)
+![4](https://github.com/Krish123-lang/basic-django-template/assets/56486342/4ea7397e-9bad-4b07-8f5d-bea0ad4a410d)
+![5](https://github.com/Krish123-lang/basic-django-template/assets/56486342/c6792063-4cda-45f9-b6fe-0788e39b97d2)
