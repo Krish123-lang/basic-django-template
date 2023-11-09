@@ -1,0 +1,13 @@
+{% include "messages.html" %}
+
+<h1>Home</h1>
+
+<a href="{% url "post-create" %}">Create Post</a>
+{% for post in posts %} 
+    <h1> {{post.title}} </h1>
+    <p> {{post.content}} </p>
+    <i> {{ post.published_at | date:"M d, Y h:i A" }} by <b> {{ post.author | title}}</b> </i>
+
+    <p><a href="{% url 'post-edit' post.id %}">Edit</a></p>
+    <a href="{% url 'post-delete' post.id%}">Delete</a>
+{% endfor %}
