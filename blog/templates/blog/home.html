@@ -1,5 +1,6 @@
-{% include "messages.html" %}
+{% include "base.html" %}
 
+{% block content %}
 <h1>Home</h1>
 
 <a href="{% url "post-create" %}">Create Post</a>
@@ -8,6 +9,12 @@
     <p> {{post.content}} </p>
     <i> {{ post.published_at | date:"M d, Y h:i A" }} by <b> {{ post.author | title}}</b> </i>
 
-    <p><a href="{% url 'post-edit' post.id %}">Edit</a></p>
-    <a href="{% url 'post-delete' post.id%}">Delete</a>
+    {% if request.user.is_authenticated and request.user == post.author %}
+		<p>
+			<a href="{% url 'post-edit' post.id %}">Edit</a> 
+			<a href="{% url 'post-delete' post.id%}">Delete</a>
+		</p>
+	{% endif %}
 {% endfor %}
+
+{% endblock content %}

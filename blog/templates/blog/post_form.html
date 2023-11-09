@@ -1,4 +1,6 @@
-{% include "messages.html" %}
+{% include "base.html" %}
+
+{% block content %}
 
 <a href="{% url "home" %}">Home</a>
 
@@ -9,3 +11,5 @@
     {{form.as_p}}
     <input type="submit" value="Submit">
 </form>
+
+{% endblock content %}
