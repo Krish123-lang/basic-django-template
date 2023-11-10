@@ -28,7 +28,7 @@ def sign_up(request):
 def sign_in(request):
     if request.method == 'GET':
         if request.user.is_authenticated:
-            return redirect('posts')
+            return redirect('home')
 
         form = LoginForm()
         return render(request, 'users/login.html', {'form': form})
